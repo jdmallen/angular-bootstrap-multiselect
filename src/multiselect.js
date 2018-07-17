@@ -21,7 +21,7 @@
                 displayProp: '@',
                 idProp: '@',
                 searchLimit: '=?',
-                selectionLimit: '=?',
+                selectionLimit: '&',
                 showSelectAll: '=?',
                 showUnselectAll: '=?',
                 showSearch: '=?',
@@ -40,7 +40,7 @@
                 }
             },
             link: function ($scope, $element, $attrs, $ngModelCtrl) {
-                $scope.selectionLimit = $scope.selectionLimit || 0;
+                $scope.selectionLimit = $scope.selectionLimit() || 0;
                 $scope.searchLimit = $scope.searchLimit || 25;
 
                 $scope.searchFilter = '';
